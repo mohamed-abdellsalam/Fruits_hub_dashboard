@@ -13,6 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
   image_picker: ^1.1.2
+  path: ^1.9.1
   skeletonizer: ^1.4.3
 
 dev_dependencies:
