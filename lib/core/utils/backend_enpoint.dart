@@ -3,4 +3,5 @@ class BackendEnpoint {
   static const getUserData = 'users';
   static const isUserExist = 'users';
   static const images = 'images';
+  static const products = 'products';
 }
