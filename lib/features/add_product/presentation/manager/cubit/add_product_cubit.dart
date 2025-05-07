@@ -7,29 +7,31 @@ import 'package:meta/meta.dart';
 part 'add_product_state.dart';
 
 class AddProductCubit extends Cubit<AddProductState> {
-  AddProductCubit(this.imagesRepo, this.productRepo)
+  AddProductCubit(this.imagesRepo, this.productsRepo)
       : super(AddProductInitial());
 
   final ImagesRepo imagesRepo;
-  final ProductRepo productRepo;
+  final ProductRepo productsRepo;
 
-  Future<void> addProduct(
-    AddProductInputEntity addproductInputEntity,
-  ) async {
+  Future<void> addProduct(AddProductInputEntity addProductInputEntity) async {
     emit(AddProductLoading());
-    var result = await imagesRepo.uploadImage(addproductInputEntity.image);
+    var result = await imagesRepo.uploadImage(addProductInputEntity.image);
     result.fold(
-      (failure) {
-        emit(AddProductFailure(failure.message));
+      (f) {
+        emit(
+          AddProductFailure(f.message),
+        );
       },
       (url) async {
-        addproductInputEntity.imageUrl = url;
-        var result = await productRepo.addProduct(addproductInputEntity);
+        addProductInputEntity.imageUrl = url;
+        var result = await productsRepo.addProduct(addProductInputEntity);
         result.fold(
-          (failure) {
-            emit(AddProductFailure(failure.message));
+          (f) {
+            emit(
+              AddProductFailure(f.message),
+            );
           },
-          (success) {
+          (r) {
             emit(AddProductSuccess());
           },
         );
