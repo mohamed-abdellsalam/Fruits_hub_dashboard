@@ -3,7 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_hub_dashboard/core/helper/build_error_bar.dart';
 import 'package:fruits_hub_dashboard/core/widgets/custom_modal_progress_hud.dart';
 import 'package:fruits_hub_dashboard/features/add_product/presentation/manager/cubit/add_product_cubit.dart';
-import 'package:fruits_hub_dashboard/features/add_product/presentation/views/widgets/add_product_view_body.dart';
+
+import 'add_product_view_body.dart';
 
 class AddProductViewBodyBlocBuilder extends StatelessWidget {
   const AddProductViewBodyBlocBuilder({

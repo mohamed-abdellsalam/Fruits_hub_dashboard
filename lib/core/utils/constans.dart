@@ -1,0 +1,3 @@
+const kSubaBaseUrl = 'https://tlipjdfcqhwaxemhnkgb.supabase.co';
+const kSupaBaseKey =
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRsaXBqZGZjcWh3YXhlbWhua2diIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NjcwOTk2NiwiZXhwIjoyMDYyMjg1OTY2fQ.ts1xcRXgQe888tVNsd92f8K1VGJ380G3v4rthRHJBEk';
