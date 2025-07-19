@@ -1,4 +1,4 @@
-import 'package:fruits_hub_dashboard/features/add_product/domain/entities/review_entity_model.dart';
+import 'package:fruits_hub_dashboard/features/add_product/domain/entities/review_entityl.dart';
 
 class ReviewModel {
   final String name;

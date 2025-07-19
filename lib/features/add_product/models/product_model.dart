@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import 'package:fruits_hub_dashboard/features/add_product/domain/entities/add_product_input_entity.dart';
+import 'package:fruits_hub_dashboard/features/add_product/domain/entities/product_entity.dart';
 import 'package:fruits_hub_dashboard/features/add_product/models/review_model.dart';
 
-class AddProductInputModel {
+class ProductModel {
   final String name;
   final String code;
   final String description;
@@ -19,7 +19,7 @@ class AddProductInputModel {
   final int ratingCount = 0;
   final List<ReviewModel> reviews;
 
-  AddProductInputModel({
+  ProductModel({
     required this.reviews,
     required this.expirationMonths,
     required this.numberOfcalories,
@@ -34,10 +34,10 @@ class AddProductInputModel {
     this.imageUrl,
   });
 
-  factory AddProductInputModel.fromEntity(
-    AddProductInputEntity addProductInputEntity,
+  factory ProductModel.fromEntity(
+    ProductEntity addProductInputEntity,
   ) {
-    return AddProductInputModel(
+    return ProductModel(
       expirationMonths: addProductInputEntity.expirationMonths,
       numberOfcalories: addProductInputEntity.numberOfcalories,
       name: addProductInputEntity.name,
