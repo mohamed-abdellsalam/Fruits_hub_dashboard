@@ -22,4 +22,15 @@ class ImagesRepoImpl implements ImagesRepo {
       );
     }
   }
+
+  Future<Either<Failure, String>> getImageUrl(String path) async {
+    try {
+      String url = await stoarageService.getFileUrl(path);
+      return Right(url);
+    } catch (e) {
+      return const Left(
+        ServerFailure(message: 'Failed to get image URL'),
+      );
+    }
+  }
 }

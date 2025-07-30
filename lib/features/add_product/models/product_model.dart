@@ -18,8 +18,9 @@ class ProductModel {
   final num avgRating = 0;
   final int ratingCount = 0;
   final List<ReviewModel> reviews;
-
+  final int sellingCount;
   ProductModel({
+    this.sellingCount = 0,
     required this.reviews,
     required this.expirationMonths,
     required this.numberOfcalories,
@@ -45,6 +46,7 @@ class ProductModel {
       description: addProductInputEntity.description,
       price: addProductInputEntity.price,
       image: addProductInputEntity.image,
+      imageUrl: addProductInputEntity.imageUrl,
       isFeatured: addProductInputEntity.isFeatured,
       unitAmount: addProductInputEntity.unitAmount,
       isOrganic: addProductInputEntity.isOrganic,
@@ -67,6 +69,7 @@ class ProductModel {
       'unitAmount': unitAmount,
       'isOrganic': isOrganic,
       'reviews': reviews.map((e) => e.toJson()).toList(),
+      'sellingCount': sellingCount,
     };
   }
 }

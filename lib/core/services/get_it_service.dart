@@ -11,7 +11,7 @@ import 'package:get_it/get_it.dart';
 final getIt = GetIt.instance;
 
 void setupGetit() {
-  getIt.registerSingleton<StorageServices>(SubabaseStorageServices());
+  getIt.registerSingleton<StorageServices>(SupabaseStoargeService());
   getIt.registerSingleton<DatabaseService>(FireStoreServices());
   getIt.registerSingleton<ImagesRepo>(ImagesRepoImpl(
     getIt.get<StorageServices>(),

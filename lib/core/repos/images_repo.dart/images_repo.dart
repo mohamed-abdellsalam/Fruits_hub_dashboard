@@ -5,4 +5,5 @@ import 'package:fruits_hub_dashboard/core/errors/failures.dart';
 
 abstract class ImagesRepo {
   Future<Either<Failure, String>> uploadImage(File imageFile);
+  Future<Either<Failure, String>> getImageUrl(String path);
 }

@@ -15,8 +15,8 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  await SubabaseStorageServices.initSubabaseStorage();
-  await SubabaseStorageServices.createBuckets('fruits_images');
+  await SupabaseStoargeService.initSupabase();
+  await SupabaseStoargeService.createBuckets('fruits_images');
   setupGetit();
   runApp(const MainApp());
 }
