@@ -23,6 +23,7 @@ class ImagesRepoImpl implements ImagesRepo {
     }
   }
 
+  @override
   Future<Either<Failure, String>> getImageUrl(String path) async {
     try {
       String url = await stoarageService.getFileUrl(path);
